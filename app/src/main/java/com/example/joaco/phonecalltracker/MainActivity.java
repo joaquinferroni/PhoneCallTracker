@@ -87,8 +87,6 @@ public class MainActivity extends AppCompatActivity {
         boolean hasReadPhonePermission = ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED;
         boolean hasReadCallLogPermission = ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_CALL_LOG) == PackageManager.PERMISSION_GRANTED;
         boolean hasProcessOutgoingCallsPermission = ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.PROCESS_OUTGOING_CALLS) == PackageManager.PERMISSION_GRANTED;
-
-
         if (!hasWriteCallPermission) {
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.WRITE_CALL_LOG}, REQUEST_CALL_LOG);
         } else if (!hasReadPhonePermission) {
@@ -185,54 +183,43 @@ public class MainActivity extends AppCompatActivity {
         switch (requestCode) {
             case REQUEST_PHONE_CALL: {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    // makeCall(null);
                     checkPermissions();
                 }
-
                 return;
             }
             case REQUEST_CALL_LOG: {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    //DeleteCallLogByNumber();
                     checkPermissions();
                 }
                 return;
             }
             case REQUEST_READ_PHONE: {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    //DeleteCallLogByNumber();
                     checkPermissions();
                 }
                 return;
             }
             case REQUEST_READ_CALL_LOG: {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    //DeleteCallLogByNumber();
                     checkPermissions();
                 }
                 return;
             }
             case REQUEST_PROCESS_OUTGOING_CALLS: {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    //DeleteCallLogByNumber();
                     checkPermissions();
                 }
                 return;
             }
         }
-
-
     }
 
     @TargetApi(Build.VERSION_CODES.M)
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
         if (requestCode == ACTION_MANAGE_OVERLAY_PERMISSION_REQUEST_CODE) {
             checkPermissions();
-
         }
-
     }
 }

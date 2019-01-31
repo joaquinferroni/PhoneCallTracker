@@ -22,7 +22,6 @@ public class PhoneCallReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         Log.d("BootTest : ", "\nOnBootReceiver - Received a broadcast!");
-
         //We listen to two intents.  The new outgoing call only tells us of an outgoing call.  We use it to get the number.
         if (intent.getAction().equals("android.intent.action.NEW_OUTGOING_CALL")) {
             SharedPreferences.Editor editor = context.getSharedPreferences("preferences", MODE_PRIVATE).edit();
