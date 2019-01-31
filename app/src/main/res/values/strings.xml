@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Apex</string>
+    <string name="continue_call">CONTINUAR LA LLAMADA</string>
+    <string name="ok">OK</string>
+    <string name="exit">SALIR</string>
+    <string name="back">VOLVER</string>
+    <string name="chat">CHATEA CON NOSOTROS</string>
+    <string name="actions">ACCIONES</string>
+    <string name="my_amount">SERVICIO 1</string>
+    <string name="pay">SERVICIO 2</string>
+    <string name="activate">SERVICIO 3</string>
+    <string name="claro_club">SERVICIO 4</string>
+
+    <string name="title_activity_splash_screen">Apex</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>
